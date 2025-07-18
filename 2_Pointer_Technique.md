@@ -1,4 +1,4 @@
-# 26. Remove Duplicates from Sorted Array
+ 26. Remove Duplicates from Sorted Array
 
 class Solution {
     public int removeDuplicates(int[] nums) {
@@ -16,7 +16,7 @@ class Solution {
 }
 
 ------------------------------------------------
-# 167. Two Sum II - Input Array Is Sorted
+ 167. Two Sum II - Input Array Is Sorted
 
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
@@ -35,7 +35,7 @@ class Solution {
 }
 
 -------------------------------------------------
-# 283. Move Zeroes
+ 283. Move Zeroes
 
 class Solution {
     public void moveZeroes(int[] nums) {
@@ -56,7 +56,7 @@ class Solution {
 }
 
 ---------------------------------------------------
-# 344. Reverse String
+ 344. Reverse String
 
 class Solution {
     public void reverseString(char[] s) {
@@ -73,7 +73,7 @@ class Solution {
 }
 
 ---------------------------------------------------
-# 11. Container With Most Water
+ 11. Container With Most Water
 
 class Solution {
     public int maxArea(int[] height) {
@@ -93,3 +93,30 @@ class Solution {
         return maxArea;
     }
 }
+
+---------------------------------------------------
+125. Valid Palindrome
+
+class Solution {
+    public boolean isPalindrome(String s) {
+        s=s.toLowerCase();
+        int left=0,right=s.length()-1;
+        while(left<right)
+        {
+            while(left<right && (!Character.isLetterOrDigit(s.charAt(left))))
+            left++;
+            while(left<right && (!Character.isLetterOrDigit(s.charAt(right))))
+            right--;
+
+            if(s.charAt(left)!=s.charAt(right))
+            return false;
+            left++;
+            right--;
+        }
+        return true;
+    }
+} 
+--------------------------------------------------------
+977. Squares of a Sorted Array
+
+978. 
